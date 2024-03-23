@@ -1,16 +1,13 @@
+def algoritmo_raro(n):            #Se crea la funcion con el parametro "n"
+    contadorN = [n]         #Se crea una variable sencuencia_lista la cual tranforma "n" en un array.
+    while n != 1:                 #Se usa el bucle mientras con la condicion de n distinto de 1.
+        if n % 2 == 0:            #Condicional, si el resto de n / 2 es 0, es un numero par, entronces se divide por 2.
+            n = n // 2
+        else:                     #Caso contrario se lo multiplica por 3 y lo suma 1.
+            n = 3 * n + 1
+        contadorN.append(n)       #El contadorN almacena el nuevo numero en el array. 
+    print(contadorN)              #Muestra el resultado por consola.
 
-n = int
-contador = [n]
+#algoritmo_raro(3)       
+assert algoritmo_raro(3) == [3, 10, 5, 16, 8, 4, 2, 1], "Error en el caso de prueba"
 
-def algoritmo_rarote(n):         # Comenzamos definiendo la funcion, pasandole como parametro "n".
-
-    while ( n != 1 ):            #Usamos el bucle "mientras" donde condicionamos que n sea distinto de 1.
-      contador.append(n)  
-    if ( n % 2 != 0 ):       #Condicional, si n divido 2 es distinto de 0, quiere decir que es impar
-            n = (n * 3) + 1      #Por lo que n se multiplica por 3 y se la suma  1.
-    else:                    # En caso de que no sea así, se lo divide por 2.
-            n //= 2             
-    contador.append(1)       #Se añade el numero 1 al final del arreglo.
-
-
-algoritmo_rarote(3)
