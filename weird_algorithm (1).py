@@ -1,7 +1,7 @@
         #Se crea la funcion con el parametro "n"
 def algoritmo_raro(n): 
     
-        #Se crea una variable sencuencia_lista la cual tranforma "n" en un array.
+        #Se crea una variable contadorN la cual tranforma "n" en un array.
     contadorN = [n]             
     
         #Se usa el bucle mientras con la condicion de n distinto de 1.
