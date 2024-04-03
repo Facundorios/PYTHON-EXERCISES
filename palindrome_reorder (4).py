@@ -27,9 +27,8 @@ def ordenador_palindromo(n):
     return palindromo + letra_impar + palindromo[::-1]
 
 
-# print(ordenador_palindromo("qqwweerrttyyuuiiopp"))
+print(ordenador_palindromo("151515515"))
 
 # Caso de prueba
 assert ordenador_palindromo("aabbc") == "abcba", "Error en el casode prueba"
 print("Todos los casos de prueba han pasado correctamente")
-

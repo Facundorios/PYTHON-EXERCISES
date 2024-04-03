@@ -1,38 +1,28 @@
-def espiral_de_numeros(filas, columnas):
-    #Condicional para saber si el el parametro de filas es mayor que el de columnas
-    if filas > columnas:
-    #En caso de ser verdadero usamos
+# Hace una funcion que toma como parametros x e y, que sirven para ubicar el numero en el espiral.
+def espiral_de_numeros(x, y):
+    # Condicional para saber si el el parametro de filas es mayor que el de columnas
 
-        return (filas - 1) ** 2 + columnas + 1
-    #En caso contrario:
+    if x > y:
+
+        # Condicional para saber si  "filas" son par
+        if x % 2 == 0:
+            # En caso de ser verdadero, devuelve el cuadrado de "filas", menos "el siguiente" de columnas
+            return (x**2) - y + 1
+        # En caso contrario:
+        else:
+            # Retorna el anterior de "filas" al cuadrado, más "columnas"
+
+            return (x - 1) ** 2 + y
+    # Caso en que las filas sean menor que las columnas:
     else:
-        #Verificamos que x sea columnaas sea par.
-        if columnas % 2 == 0:
-        #Devuelva el anterior de columna al cuadrado, sumado el numero filas
-            return (columnas - 1) ** 2 + filas
+        # Verifica de que las columnas sean par.
+        if y % 2 == 0:
+            # En caso de ser verdadero, devuelve el anterior de "columnas" al cuadrado, sumado "filas"
+            return (y - 1) ** 2 + x
         else:
-        #Si columnas es impar, se calcula el cuadrado y selo resta por numero de filas - 1
-            return (columnas **  2) - filas + 1
-    
-print(espiral_de_numeros(4,4))
-# assert espiral_de_numeros(2, 2) == 3, "Error en el caso de prueba"
-# print("Todos los casos de prueba han pasado correctamente")
-
-#Hace una funcion que toma como parametros x e y, que sirven para ubicar el numero en el espiral.
-def espiral_de_numeros(filas, columnas):
-#
-    if filas > columnas:
-        if filas % 2 == 0:
-            return (filas ** 2) - columnas + 1
-        else:
-            return ( filas - 1 ) ** 2 + columnas
-    else:
-        if columnas % 2 == 0:
-            return ( columnas - 1 ) ** 2 + filas
-        else:
-            return columnas ** 2 - filas + 1
+            # En caso de ser falso, retorna "columnas" al cuadrado menos el siguiente de "filas".
+            return (y**2) - x + 1
 
 
-
-assert espiral_de_numeros(2, 2) == 3, "Error en el caso de prueba"
+assert espiral_de_numeros(5, 2) == 3, "Error en el caso de prueba"
 print("Todos los casos de prueba han pasado correctamente")
